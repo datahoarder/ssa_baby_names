@@ -1,0 +1,22 @@
+title: U.S. Social Security Administration Baby Names
+description: |
+  Name, sex, and count of baby names as recorded by the U.S. Social Security Administration, by state and nationwide.
+
+
+packages:
+  - title: Nationwide baby names TK
+    filename: nationwide.csv.zip
+    description: All the babies
+    build:
+      packager: nationwide_all # some affordance for being able to switch between CSV and SQL
+      schemas:
+        - nation.yaml
+
+  - title: States baby names TK
+    filename: nationwide.sqlite.zip
+    description: All the babies by state
+    build:
+      packager: states_all
+      schemas:
+        - states.yaml
+
