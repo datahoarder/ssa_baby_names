@@ -8,13 +8,14 @@ db:
     - name
     - sex
     - year
-
+  indexes:
+    - [name, sex]
+    - year
 columns:
   name:
     type: String
     length: 30
     nullable: false
-    index: true
   sex:
     type: String
     length: 1
@@ -24,7 +25,6 @@ columns:
     length: 4
     unsigned: true
     nullable: false
-    index: true
   count:
     type: Integer
     length: 6

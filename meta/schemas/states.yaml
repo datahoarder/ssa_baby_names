@@ -9,7 +9,10 @@ db:
     - state
     - sex
     - year
-
+  indexes:
+    - [name, sex]
+    - state
+    - year
 columns:
   name:
     type: String
